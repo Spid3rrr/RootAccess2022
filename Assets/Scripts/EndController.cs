@@ -5,9 +5,10 @@ using UnityEngine;
 public class EndController : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameController gc;
     void Start()
     {
-        
+        gc = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
     }
 
     // Update is called once per frame
@@ -18,7 +19,7 @@ public class EndController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.tag=="Player") {
-            print("Level completed");
+            gc.ComputerReached();
         }
     }
 }

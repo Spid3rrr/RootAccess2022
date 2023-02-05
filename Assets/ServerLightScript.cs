@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 
 public class ServerLightScript : MonoBehaviour
 {
-    public UnityEngine.Rendering.Universal.Light2D light;
+    public Light2D light;
     public float lightHighIntensity = 3f;
     public float lightLowIntensity = 0f;
     public float fadeSpeed = 10f;
@@ -14,7 +15,7 @@ public class ServerLightScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        light = gameObject.GetComponent<UnityEngine.Rendering.Universal.Light2D>();
+        light = gameObject.GetComponent<Light2D>();
         InvokeRepeating(nameof(switchLight),Random.Range(0f,2f),Random.Range(0f,2f));
     }
 
