@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class LightController : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class LightController : MonoBehaviour
             if (hit.collider.tag == "Player")
             {
                 print("Player Detected");
+                gameObject.GetComponent<Light2D>().color = new Color(1.2f,0,0,0.8f);
                 gc.LostGame();
             }
         }
