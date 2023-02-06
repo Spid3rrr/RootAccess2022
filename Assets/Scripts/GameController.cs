@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour
     public TextMeshProUGUI Timer,Timer2;
     public GameObject winPanel,losePanel,puzzlePanel;
     public AudioClip deathSound;
-    public float timeInSeconds = 60f;
+    public float timeInSeconds = 120f;
     // Start is called before the first frame update
     void Start()
     {
